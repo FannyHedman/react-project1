@@ -1,7 +1,16 @@
-.App {
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.heroSectionContainer {
+    position: relative;
     text-align: center;
 }
 
-.navigation {
-    background-color: aqua;
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

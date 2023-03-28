@@ -1,20 +1,26 @@
-import { Link, Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
+import {
+    NavBarContainer,
+    NavBarInnerContainer,
+    LogoContainer,
+    LinksContainer,
+    NavBarLink
+} from './styles/Navbar.style.js'
 
 const Navbar = () => {
     return (
         <>
-            <div className="navigation">
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/about">About</Link>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            <NavBarContainer>
+              <NavBarInnerContainer>
+                <LogoContainer>Logga</LogoContainer>
+                <LinksContainer>
+                        <NavBarLink to="/">Home</NavBarLink>
+                        <NavBarLink to="/about">About</NavBarLink>
+                        <NavBarLink to="/about">Contact</NavBarLink>
+                        <NavBarLink to="/about">Shop</NavBarLink>
+                </LinksContainer>
+                </NavBarInnerContainer>
+            </NavBarContainer>
             <Outlet />
         </>
     )
