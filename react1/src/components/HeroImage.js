@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useMediaQuery } from 'react-responsive'
+import styled from 'styled-components'
 import HeroImage from '../img/hero-image.jpg'
-
 
 const HeroImageSection = () => {
     const isLargeScreen = useMediaQuery({ query: '(min-width: 1400px' })
@@ -16,7 +17,7 @@ const HeroImageSection = () => {
     })
     const isMobile = useMediaQuery({ query: '(max-width: 420px)' })
     return (
-        <div className="heroSectionContainer">
+        <HeroSectionContainer>
             {isLargeScreen && (
                 <img
                     style={{ width: 1920, height: 900 }}
@@ -52,11 +53,39 @@ const HeroImageSection = () => {
                     alt="logo"
                 />
             )}
-            <h1 className="centered">
-                TEST
-            </h1>
-        </div>
+            <HeroSectionHeader>TEST</HeroSectionHeader>
+            <ExhibitionsLink to="/exhibitions">
+                Take me to the exhibitions
+            </ExhibitionsLink>
+        </HeroSectionContainer>
     )
 }
 
 export default HeroImageSection
+
+// Styles
+
+const HeroSectionContainer = styled.div`
+    position: relative;
+    text-align: center;
+`
+const HeroSectionHeader = styled.h2`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+`
+
+const ExhibitionsLink = styled(Link)`
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border-color: black;
+    text-decoration: none;
+`

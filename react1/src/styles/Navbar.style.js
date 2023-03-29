@@ -31,8 +31,6 @@ export const LogoContainer = styled.div`
     font-size: 1.2rem;
 `
 
-
-
 export const NavBarLink = styled(Link)`
     margin-left: 2.5vw;
     color: black;
