@@ -20,6 +20,10 @@ const Exhibitions = () => {
         }
     })
 
+    const onFilterValueSelected = (filterValue) => {
+        setFilterValue(filterValue)
+    }
+
     async function fetchData() {
         try {
             const response = await axios.get('data.json')
@@ -32,19 +36,6 @@ const Exhibitions = () => {
     useEffect(() => {
         fetchData()
     }, [])
-
-    // const filterByCategory = (e) => {
-    //     setExhibit(e.target.value)
-
-    //     const filteredItems = exhibit.filter((item) =>
-    //         item.year.includes(e.target.value)
-    //     )
-    //     setFilter(filteredItems)
-    // }
-
-    const onFilterValueSelected = (filterValue) => {
-        setFilterValue(filterValue)
-    }
 
     return (
         <>
