@@ -2,62 +2,90 @@
     {
         "id": 1,
         "name": "Woman in despare",
+        "artist": "Lorem Ipsum",
         "category": "Historical",
         "year": "2022",
-        "MediumImage": "../src/img/historical-small/small-birmingham-museums-trust-aE0-ZJb2VTQ-unsplash.jpg"
+        "mediumImage": "./historical-small/small-birmingham-museums-trust-aE0-ZJb2VTQ-unsplash.jpg"
     },
     {
         "id": 2,
         "name": "Woman with bowl",
+        "artist": "Lorem Ipsum",
         "category": "Historical",
-        "year": "2022"
+        "year": "2022",
+        "mediumImage": "./historical-small/small-birmingham-museums-trust-Kv1hYl9LlxU-unsplash.jpg"
     },
     {
         "id": 3,
         "name": "Woman red hair",
+        "artist": "Lorem Ipsum",
         "category": "Historical",
-        "year": "2022"
+        "year": "2022",
+        "mediumImage": "./historical-small/small-birmingham-museums-trust-nenWeBmX9mY-unsplash.jpg"
     },
     {
         "id": 4,
         "name": "Woman with dog",
+        "artist": "Lorem Ipsum",
         "category": "Historical",
-        "year": "2022"
+        "year": "2022",
+        "mediumImage": "./historical-small/small-birmingham-museums-trust-XSMTwl7n3p4-unsplash.jpg"
     },
     {
         "id": 5,
         "name": "Woman with baby",
+        "artist": "Lorem Ipsum",
         "category": "Historical",
-        "year": "2022"
+        "year": "2022",
+        "mediumImage": "./historical-small/small-europeana-MxM-I7e7MQY-unsplash.jpg"
     },
     {
         "id": 6,
         "name": "Woman with angels",
+        "artist": "Lorem Ipsum",
         "category": "Historical",
-        "year": "2022"
+        "year": "2022",
+        "mediumImage": "./historical-small/small-europeana-O02xMsNYH-4-unsplash.jpg"
     },
     {
         "id": 7,
         "name": "Woman with collar",
+        "artist": "Lorem Ipsum",
         "category": "Historical",
-        "year": "2022"
+        "year": "2022",
+        "mediumImage": "./historical-small/small-europeana-q8o3yLDBJyk-unsplash.jpg"
     },
     {
         "id": 8,
         "name": "Girl with hat",
+        "artist": "Lorem Ipsum",
         "category": "Historical",
-        "year": "2022"
+        "year": "2022",
+        "mediumImage": "./historical-small/small-europeana-rBVcss6bjBA-unsplash.jpg"
     },
     {
         "id": 9,
         "name": "Woman with swan",
+        "artist": "Lorem Ipsum",
         "category": "Historical",
-        "year": "2022"
+        "year": "2022",
+        "mediumImage": "./historical-small/small-europeana-SxyhOLXx5pQ-unsplash.jpg"
     },
     {
         "id": 10,
         "name": "Girl with fan",
+        "artist": "Lorem Ipsum",
         "category": "Historical",
-        "year": "2022"
+        "year": "2022",
+        "mediumImage": "./historical-small/small-europeana-Z5AsRx7p2HU-unsplash.jpg"
+    },
+
+    {
+        "id": 11,
+        "name": "Couples swimming",
+        "artist": "Lorem Ipsum",
+        "category": "Modern",
+        "year": "2023",
+        "mediumImage": "./modern-small/small-florida-memory-hrIvN4rnv78-unsplash.jpg"
     }
 ]

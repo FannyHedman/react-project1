@@ -6,7 +6,7 @@ export const NavBarContainer = styled.nav`
     height: 10vh;
     display: flex;
     flex-direction: column;
-    background-color: lightblue;
+    background-color: grey;
 `
 
 export const NavBarInnerContainer = styled.div`
