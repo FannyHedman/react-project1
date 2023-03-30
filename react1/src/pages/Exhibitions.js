@@ -1,69 +1,29 @@
-// import React from 'react'
-// import { useEffect, useState } from 'react'
-// import styled from 'styled-components'
-// import axios from 'axios'
-
-// const Exhibitions = () => {
-//     const [painting, setPainting] = useState([])
-
-//     async function fetchData() {
-//         try {
-//             const response = await axios.get('data.json')
-//             setPainting(response.data)
-//         } catch (error) {
-//             console.log(error)
-//         }
-//     }
-
-//     useEffect(() => {
-//         fetchData()
-//     }, [])
-
-//     const names = painting.map((name) => <h2>{name.name}</h2>)
-//     const category = painting.map((category) => <p>{category.category}</p>)
-//     const image = painting.map((image) => (
-//         <img src={image.mediumImage} alt="hejhipp"></img>
-//     ))
-
-//     return (
-//         <>
-//             <ExhibitionsContainer>
-//                 <h1>Exhibitions</h1>
-//                 <div>
-//                     <h2>Historical</h2>
-//                     <img className="img" src={image.mediumImage} alt="testbild"></img>
-//                 </div>
-//                 <div>
-//                     <h2>Modern</h2>
-//                 </div>
-//             </ExhibitionsContainer>
-//         </>
-//     )
-// }
-
-// const ExhibitionsContainer = styled.div`
-//     @media (max-width: 420px) {
-//         box-sizing: border-box;
-//         background-color: black;
-//     }
-// `
-// export default Exhibitions
-
 import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import '../App.css'
+import FilterItems from '../components/FilterItems'
 
 const Exhibitions = () => {
-    const [painting, setPainting] = useState([])
-    const [filter, setFilter] = useState([])
+    const [exhibit, setExhibit] = useState([])
+    const [filterValue, setFilterValue] = useState('All')
+
+    const filteredItem = exhibit.filter((item) => {
+        if (filterValue === '2022') {
+            return item.year === '2022'
+        } else if (filterValue === '2023') {
+            return item.year === '2023'
+        } else {
+            return item
+        }
+    })
 
     async function fetchData() {
         try {
             const response = await axios.get('data.json')
-            setPainting(response.data)
+            setExhibit(response.data)
         } catch (error) {
             console.log(error)
         }
@@ -73,23 +33,29 @@ const Exhibitions = () => {
         fetchData()
     }, [])
 
-    const filterByCategory = (e) => {
-        setPainting(e.target.value)
+    // const filterByCategory = (e) => {
+    //     setExhibit(e.target.value)
 
-        const filteredItems = painting.filter((item) =>
-            item.year.includes(e.target.value)
-        )
-        setFilter(filteredItems)
+    //     const filteredItems = exhibit.filter((item) =>
+    //         item.year.includes(e.target.value)
+    //     )
+    //     setFilter(filteredItems)
+    // }
+
+    const onFilterValueSelected = (filterValue) => {
+        setFilterValue(filterValue)
     }
-
 
     return (
         <>
             <ExhibitsContainer>
                 <ExhibitionsHeader>Exhibitions</ExhibitionsHeader>
                 <FilterHeader>Filter by date</FilterHeader>
+                <FilterSelect>
+                    <FilterItems filterValueSelected={onFilterValueSelected} />
+                </FilterSelect>
 
-                {painting
+                {filteredItem
                     .filter((item) => item.id === 6)
                     .map((filteredItem) => (
                         <ExhibitOneContainer key={filteredItem}>
@@ -103,7 +69,7 @@ const Exhibitions = () => {
                             </Link>
                         </ExhibitOneContainer>
                     ))}
-                {painting
+                {filteredItem
                     .filter((item) => item.id === 11)
                     .map((filteredItem) => (
                         <ExhibitTwoContainer key={filteredItem}>
@@ -126,7 +92,6 @@ const ExhibitsContainer = styled.div`
     box-sizing: border-box;
     width: 100%;
     margin-top: 5vh;
-    /* margin: 5%; */
     gap: 20px;
     justify-items: left;
     justify-content: center;
@@ -140,12 +105,9 @@ const ExhibitsContainer = styled.div`
         grid-template-columns: 0.5fr, 1fr, 1fr;
         grid-template-rows: 0.5fr, 1fr;
     }
-
-    /* align-items: center; */
 `
 
 const ExhibitionsHeader = styled.h1`
-    /* margin-left: 3vw; */
     @media (max-width: 920px) {
         grid-column-start: 1;
         grid-column-end: 1;
@@ -168,6 +130,17 @@ const FilterHeader = styled.h5`
         grid-row-start: 2;
         grid-row-end: 2;
         margin-right: 5vw;
+    }
+`
+
+const FilterSelect = styled.div`
+    @media (min-width: 921px) {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        margin-right: 5vw;
+        margin-top: 7vh;
     }
 `
 
