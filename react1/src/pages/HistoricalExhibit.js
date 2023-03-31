@@ -48,7 +48,6 @@ const ExhibitOneContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch;
     margin-top: 5vh;
 `
 
