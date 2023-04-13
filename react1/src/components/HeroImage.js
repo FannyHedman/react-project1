@@ -82,7 +82,7 @@ const ExhibitionsLink = styled(Link)`
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     background-color: black;
     color: white;
     border-radius: 5px;

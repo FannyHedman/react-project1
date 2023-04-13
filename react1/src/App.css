@@ -1,7 +1,19 @@
-html, body {
+html,
+body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: white;
+    /* background-color: white; */
+}
+
+.Container {
+}
+
+.Container-dark {
+    background-color: black;
+}
+
+.Container-light {
+    background-color: pink;
 }

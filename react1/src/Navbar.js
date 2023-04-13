@@ -15,8 +15,8 @@ const Navbar = () => {
                 <LogoContainer>Logga</LogoContainer>
                 <LinksContainer>
                         <NavBarLink to="/">Home</NavBarLink>
+                        <NavBarLink to="/exhibitions">Exhibitions</NavBarLink>
                         <NavBarLink to="/about">About</NavBarLink>
-                        <NavBarLink to="/about">Contact</NavBarLink>
                         <NavBarLink to="/about">Shop</NavBarLink>
                 </LinksContainer>
                 </NavBarInnerContainer>
