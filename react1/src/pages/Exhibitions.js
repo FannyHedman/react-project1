@@ -83,6 +83,7 @@ const ExhibitsContainer = styled.div`
     box-sizing: border-box;
     width: 100%;
     margin-top: 5vh;
+    padding-bottom: 20vh;
     gap: 20px;
     justify-items: left;
     justify-content: center;

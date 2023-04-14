@@ -53,7 +53,7 @@ const HeroImageSection = () => {
                     alt="logo"
                 />
             )}
-            <HeroSectionHeader>TEST</HeroSectionHeader>
+
             <ExhibitionsLink to="/exhibitions">
                 Take me to the exhibitions
             </ExhibitionsLink>
@@ -69,19 +69,19 @@ const HeroSectionContainer = styled.div`
     position: relative;
     text-align: center;
 `
-const HeroSectionHeader = styled.h2`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-`
+// const HeroSectionHeader = styled.h2`
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+// `
 
 const ExhibitionsLink = styled(Link)`
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 10px;
+    padding: 20px;
     font-size: 1.2rem;
     background-color: black;
     color: white;

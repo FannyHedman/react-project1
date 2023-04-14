@@ -4,16 +4,14 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    /* background-color: white; */
 }
 
-.Container {
+.Dark-theme {
+    background-color: rgb(16, 16, 16);
+    color: white;
 }
 
-.Container-dark {
-    background-color: black;
-}
-
-.Container-light {
-    background-color: pink;
+.Light-theme {
+    background-color: rgb(247, 243, 221);
+    color: black;
 }

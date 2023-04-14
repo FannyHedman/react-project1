@@ -8,7 +8,7 @@ const DarkModeSwitch = () => {
     }
     return (
         <div>
-            <button onClick={handleClick}>Dark Mode</button>
+            <button onClick={handleClick}>DARKMODE</button>
         </div>
     )
 }
